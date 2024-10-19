@@ -1,0 +1,21 @@
+import hashlib
+
+def sha256_hash(text):
+    # Create a new SHA-256 hash object
+    sha256 = hashlib.sha256()
+    
+    # Update the hash object with the byte-encoded text
+    sha256.update(text.encode('utf-8'))
+    
+    # Return the hash in hexadecimal format
+    return sha256.hexdigest()
+
+# Retrieve the text of the Book of Mark
+# You'll need to copy the text manually into this variable
+book_of_mark_text = """(Insert the entire text of the Book of Mark here)"""
+
+# Compute the hash
+hash_result = sha256_hash(book_of_mark_text)
+
+# Print the resulting hash
+print(hash_result)
